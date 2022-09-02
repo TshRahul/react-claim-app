@@ -1,0 +1,23 @@
+server:
+  port: 8089
+
+spring:
+  datasource:
+      url:
+      username:
+      password:
+      driver-class-name: com.ibm.db2.jcc.DB2Driver
+      hikari:
+        platform: DB2
+        pool-name:
+        minimum-idle: 5
+        maximum-pool-size: 10
+        idle-timeout: 300000
+        max-lifetime: 3600000
+        keepalive-time: 60000
+  jpa:
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: none
+        dialect: org.hibernate.dialect.DB2Dialect
